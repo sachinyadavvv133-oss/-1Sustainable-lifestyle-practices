@@ -1,0 +1,43 @@
+:root{
+  --bg:#f6f7f3;
+  --card:#ffffff;
+  --muted:#6b7280;
+  --accent:#2f855a;
+  --accent-2:#2b6cb0;
+  --max-width:1100px;
+  --radius:12px;
+}
+*{box-sizing:border-box}
+body{font-family:Inter,system-ui,Segoe UI,Roboto,Helvetica,Arial,sans-serif;margin:0;background:var(--bg);color:#0f172a;line-height:1.6}
+.container{max-width:var(--max-width);margin:0 auto;padding:2rem}
+.site-header{background:linear-gradient(90deg,var(--accent),var(--accent-2));color:white}
+.site-header .container{display:flex;align-items:center;justify-content:space-between;padding:1rem 2rem}
+.logo{font-weight:700;color:white;text-decoration:none}
+.site-nav{display:flex;gap:1rem}
+.site-nav a{color:rgba(255,255,255,0.95);text-decoration:none;padding:0.35rem 0.5rem;border-radius:8px}
+.nav-toggle{display:none;background:transparent;border:0;color:white;font-size:1.25rem}
+.hero{padding:4rem 0;background:linear-gradient(180deg,rgba(255,255,255,0.06),transparent);text-align:center}
+.hero h1{font-size:clamp(1.6rem,3.2vw,2.6rem);margin-bottom:0.5rem}
+.hero p{max-width:60ch;margin:0.5rem auto 1rem;color:var(--muted)}
+.btn{display:inline-block;background:var(--accent);color:white;padding:0.6rem 1rem;border-radius:8px;text-decoration:none}
+.section{background:transparent;padding:2rem 0}
+.section h2{margin-top:0}
+.resources ul, .section ul{margin:0.5rem 0 0 1.2rem}
+.site-footer{padding:1.5rem 0;background:transparent;color:var(--muted)}
+.muted{color:var(--muted);font-size:0.9rem}
+@media (max-width:800px){
+  .site-header .container{padding:0.75rem 1rem}
+  .site-nav{display:none;flex-direction:column;background:transparent;position:absolute;top:64px;right:12px;padding:0.5rem;border-radius:8px}
+  .nav-toggle{display:block}
+  .site-nav.open{display:flex}
+}
+
+/* small card styling for sections */
+.section{background:var(--card);margin:1rem 0;border-radius:var(--radius);box-shadow:0 6px 18px rgba(14,17,22,0.06);padding:1.25rem}
+
+footer .container{display:flex;flex-direction:column;gap:0.4rem}
+
+a{color:var(--accent-2)}
+
+/* accessibility focus */
+a:focus, button:focus{outline:3px solid rgba(45, 55, 72, 0.12);outline-offset:3px}
